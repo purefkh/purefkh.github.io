@@ -12,15 +12,6 @@
     </entry>
     
     <entry>
-      <title>电赛培训之示波器</title>
-      <link href="/oscilloscope/"/>
-      <url>/oscilloscope/</url>
-      <content type="html"><![CDATA[<p>这个暑假不回家(误)，参加了电子设计大赛。</p><p>今天正式开始培训，老师布置的任务让我们这些大一菜鸡颇为头痛。。。</p><p>甩一个<a href="http://p8pl852zp.bkt.clouddn.com/%E7%A4%BA%E6%B3%A2%E5%99%A8%E9%A2%98%E7%9B%AE.pdf" target="_blank" rel="noopener">题目要求链接</a><br><img src="http://p8pl852zp.bkt.clouddn.com/oscilloscope1.png" alt="题目要求"></p><p>待填坑(<strong>鸽了也说不定呢</strong>)</p>]]></content>
-      
-      
-    </entry>
-    
-    <entry>
       <title>树莓派之从吃土到吃灰</title>
       <link href="/raspberry-1/"/>
       <url>/raspberry-1/</url>
@@ -34,6 +25,15 @@
       <link href="/tanhq/"/>
       <url>/tanhq/</url>
       <content type="html"><![CDATA[<p>经常在各种地方看到 <code>void main()</code> 以及 <code>main()</code>，所以特地查了一些资料来说明这是不好的。</p><p><strong>首先引一段 <code>C Primer Plus</code> 中的话</strong></p><blockquote><p>如果浏览旧式的C代码，会发现程序以如下形式开始：<br>main()<br>C90 标准勉强接受这种形式，但是 C99 和 C11 标准不允许这样写。因此，即使你使用的编译器允许，也不要这样写。<br>你还会看到下面这种形式：<br>void main()<br>一些编译器允许这样写，但是所有的标准都未必认可这种写法。因此，编译器不必接受这种形式，而且许多编译器都不能这么写。</p></blockquote><p><strong>下面说一下我查到的</strong></p><pre><code>void main()</code></pre><p>首先，从标准角度(所有版本)来说，void main()肯定是错的，没有任何标准(C89/99/11以及C++98/03/11/14)中允许过这种写法。<br>void main()的写法可能是从嵌入式来的……没有操作系统，入口点是硬件实现，返回任何东西都没意义。</p><pre><code>main()</code></pre><p>在C89里，函数没有显式声明返回类型，则默认是int,但是这种方式在C99之后就被废除掉了。</p><p>又查了一下谭浩强教授的履历，<code>wikipedia</code> 上指出：</p><blockquote><p>谭浩强，1958年清华大学自动控制系毕业。</p></blockquote><p>自动化，看看 <code>百度百科</code> 是怎么说的：</p><blockquote><p>专业有两个发展方向，第一个是工业过程控制方向，第二个是嵌入式系统方向。</p></blockquote><p>结合来看，接触单片机比较多的谭教授在教材里反复使用 <code>void main</code> 也就不足为怪了吧。</p><p><strong>在C99/11标准中</strong>，明确定义了对于标准的main函数的两个原型：</p><pre><code>int main(void)</code></pre><p>以及</p><pre><code>int main(int argc, char *argv[])</code></pre><p>建议大家都能使用标准形式，这样把程序从一个编译器移至另一个编译器是会方便很多。</p><p><strong>但是，仅从次就片面的否定谭老爷子的贡献是完全不可取的。</strong></p><p>在<a href="https://www.zhihu.com/question/22793863/answer/23090714" target="_blank" rel="noopener">知乎</a>上看到了这样的描述：</p><blockquote><p>象牙塔和各类计算机等级考试中乐此不疲的“(++i) + (++i) + (++i)”问题。</p></blockquote><blockquote><p>很多程序员将这种病态、晦涩的编码方式归咎于谭浩强版的《C 程序设计》，认为谭老爷子是这种学究代码的始作俑者。<br>我后来饶有兴致地考证了一番，发现谭老爷子在《C 程序设计》（第二版）的第 58～59 页中对这种情况进行了讨论，并指出以下几点：</p></blockquote><blockquote><p>1.应该避免++/–的副作用可能产生的歧义性，建议将这样的表达式拆开写。<br>2.对于 i+++j 的情况，应使用括号来使代码明晰以避免误解，如 (i++)+j 或 i+(++j)。<br>3.总之，不要写出别人看不懂的、也不知道系统会怎样执行的程序。</p></blockquote><blockquote><p>窃为谭老爷子鸣不平啊。</p></blockquote><p>最后，引别人的一句话来结束这篇水文：</p><blockquote><p>他在我看来，是先驱，是开拓者，是伟人。<br>人类哪有不犯错的？所以，书中的错误不能掩盖谭老先生的光辉。</p></blockquote><p><img src="http://p8pl852zp.bkt.clouddn.com/tanhq.gif" alt="此图无任何恶意，仅是调侃之意"></p>]]></content>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>电赛培训之示波器</title>
+      <link href="/oscilloscope/"/>
+      <url>/oscilloscope/</url>
+      <content type="html"><![CDATA[<p>这个暑假不回家(误)，参加了电子设计大赛。</p><p>今天正式开始培训，老师布置的任务让我们这些大一菜鸡颇为头痛。。。</p><p>甩一个<a href="http://p8pl852zp.bkt.clouddn.com/%E7%A4%BA%E6%B3%A2%E5%99%A8%E9%A2%98%E7%9B%AE.pdf" target="_blank" rel="noopener">题目要求链接</a><br><img src="http://p8pl852zp.bkt.clouddn.com/oscilloscope1.png" alt="题目要求"></p><p>待填坑(<strong>鸽了也说不定呢</strong>)</p>]]></content>
       
       
     </entry>
