@@ -51,6 +51,13 @@
   
     
     <entry>
+      <title></title>
+      <link href="//404.html"/>
+      <url>//404.html</url>
+      <content type="html"><![CDATA[<!DOCTYPE HTMl><html><head><title>404 | Fiat Lux.</title><!-- favicon --><link rel="icon" href="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/blog/img/favicon.png"><link rel="icon shortcut" href="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/blog/img/favicon.png" type="image/ico"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><link rel="stylesheet" href="/css/404/style.css" type="text/css" media="all"><link href="//fonts.googleapis.com/css?family=Strait" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script></head><body><div class="wrap"><div class="banner">                    <a href="/" title="Homepage"><img src="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/404/images/404.gif" alt=""><a>                </a></a></div><div class="chrome404"><div id="container"></div>                    <script src="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/404/js/runner.js"></script>                    <script>                        initRunner('#container');                    </script></div></div>    </body></html>    ]]></content>
+    </entry>
+    
+    <entry>
       <title>这就是我瞎搞的一个blog</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
