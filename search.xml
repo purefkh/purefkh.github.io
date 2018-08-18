@@ -58,17 +58,17 @@
     </entry>
     
     <entry>
-      <title>这就是我瞎搞的一个blog</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      <content type="html"><![CDATA[<p>其实很早就想写一个博客了，但是它一直只是作为一个<strong>想法</strong>而存在，完全没有去实现它的动力</p><p>直到偶然之间在知乎看到<a href="https://www.zhihu.com/people/aspwebchh/activities" target="_blank" rel="noopener">@陈大侠</a>的回答————“<a href="https://www.zhihu.com/question/273631529/answer/369383753" target="_blank" rel="noopener">写博客对程序员很重要吗？</a>“</p><p>他是这样回答的</p><pre><code>之前开了个公众号装逼写技术博客，更新了一段时间没人看就不写技术写一些情感、生活、旅游、吃喝玩乐的内容，反正只要能写的就都写。后来相亲认识了一妹子，没多久就好上了，主要是那妹纸太主动了，我没守住底线，沦陷了。问妹纸为什么主动追我，妹纸说：你的每篇文章我都看了，字里行间感受到了正能量，应该不是那种靠不住的男人，我年纪也不小了，机会不容错过，于是就使了点套路。我之前一直单身，始终找不好女朋友， 对我有意思的我不喜欢，我喜欢的对我没感觉。现在能找到个令我满意的女朋友还没费多少事我想应该有写博客一部分功劳吧。所以我觉得写博客对程序员来说挺重要的。</code></pre><p>这…这尼玛还犹豫什么，然后就有了这个REPO</p><p>记录生活，分享心得。</p>]]></content>
-    </entry>
-    
-    <entry>
       <title>友链</title>
       <link href="/links/index.html"/>
       <url>/links/index.html</url>
       <content type="html"><![CDATA[<p>蓝盟文档页 <strong><a href="https://wiki.lanunion.top/" target="_blank" rel="noopener">https://wiki.lanunion.top/</a></strong><br>weearc的个人博客 <strong><a href="http://blog.weearc.top/" target="_blank" rel="noopener">http://blog.weearc.top/</a></strong><br>你是冰淇淋吗 <strong><a href="https://blog.mrkaria.xyz/" target="_blank" rel="noopener">https://blog.mrkaria.xyz/</a></strong><br>Moustache <strong><a href="http://hltsir.gitee.io/" target="_blank" rel="noopener">http://hltsir.gitee.io/</a></strong></p>]]></content>
+    </entry>
+    
+    <entry>
+      <title>这就是我瞎搞的一个blog</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      <content type="html"><![CDATA[<p>其实很早就想写一个博客了，但是它一直只是作为一个<strong>想法</strong>而存在，完全没有去实现它的动力</p><p>直到偶然之间在知乎看到<a href="https://www.zhihu.com/people/aspwebchh/activities" target="_blank" rel="noopener">@陈大侠</a>的回答————“<a href="https://www.zhihu.com/question/273631529/answer/369383753" target="_blank" rel="noopener">写博客对程序员很重要吗？</a>“</p><p>他是这样回答的</p><pre><code>之前开了个公众号装逼写技术博客，更新了一段时间没人看就不写技术写一些情感、生活、旅游、吃喝玩乐的内容，反正只要能写的就都写。后来相亲认识了一妹子，没多久就好上了，主要是那妹纸太主动了，我没守住底线，沦陷了。问妹纸为什么主动追我，妹纸说：你的每篇文章我都看了，字里行间感受到了正能量，应该不是那种靠不住的男人，我年纪也不小了，机会不容错过，于是就使了点套路。我之前一直单身，始终找不好女朋友， 对我有意思的我不喜欢，我喜欢的对我没感觉。现在能找到个令我满意的女朋友还没费多少事我想应该有写博客一部分功劳吧。所以我觉得写博客对程序员来说挺重要的。</code></pre><p>这…这尼玛还犹豫什么，然后就有了这个REPO</p><p>记录生活，分享心得。</p>]]></content>
     </entry>
     
     <entry>
