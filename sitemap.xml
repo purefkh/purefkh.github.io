@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://purefkh.xyz//404.html</loc>
+    
+    <lastmod>2018-08-28T02:09:16.981Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://purefkh.xyz/qixi/index.html</loc>
     
-    <lastmod>2018-08-28T02:06:48.388Z</lastmod>
+    <lastmod>2018-08-28T02:09:10.117Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>https://purefkh.xyz/about/index.html</loc>
     
     <lastmod>2018-08-24T06:06:12.801Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://purefkh.xyz//404.html</loc>
-    
-    <lastmod>2018-08-18T07:16:19.000Z</lastmod>
     
   </url>
   
