@@ -45,7 +45,7 @@
     
     <title>
         
-            树莓派之从吃土到吃灰 | 
+            Gradle的代理问题 | 
         
         Fiat Lux.
     </title>
@@ -206,7 +206,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Fiat Lux.">
-    <meta name="msapplication-starturl" content="https://purefkh.xyz/raspberry-1/">
+    <meta name="msapplication-starturl" content="https://purefkh.xyz/gradle_proxy/">
     <meta name="msapplication-navbutton-color" content="">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Fiat Lux.">
@@ -221,16 +221,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://purefkh.xyz/raspberry-1/">
+    <meta property="og:url" content="https://purefkh.xyz/gradle_proxy/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="树莓派之从吃土到吃灰 | Fiat Lux.">
+    <meta property="og:title" content="Gradle的代理问题 | Fiat Lux.">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
     
 
     
-        <meta property="article:published_time" content="Tue Aug 14 2018 00:11:49 GMT+0800">
-        <meta property="article:modified_time" content="Tue Aug 14 2018 00:11:49 GMT+0800">
+        <meta property="article:published_time" content="Sun Sep 09 2018 22:24:48 GMT+0800">
+        <meta property="article:modified_time" content="Sun Sep 09 2018 22:24:48 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -238,7 +238,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://purefkh.xyz/raspberry-1/index.html" />
+        <link rel="canonical" href="https://purefkh.xyz/gradle_proxy/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -250,10 +250,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://purefkh.xyz/raspberry-1/index.html",
-    "headline": "树莓派之从吃土到吃灰",
-    "datePublished": "Tue Aug 14 2018 00:11:49 GMT+0800",
-    "dateModified": "Tue Aug 14 2018 00:11:49 GMT+0800",
+    "mainEntityOfPage": "https://purefkh.xyz/gradle_proxy/index.html",
+    "headline": "Gradle的代理问题",
+    "datePublished": "Sun Sep 09 2018 22:24:48 GMT+0800",
+    "dateModified": "Sun Sep 09 2018 22:24:48 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "purefkh",
@@ -350,12 +350,6 @@
     
 
 
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、烧写镜像"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、烧写镜像</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二、使用SSH进行连接"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、使用SSH进行连接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三、换源"><span class="post-toc-number">3.</span> <span class="post-toc-text">三、换源</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#清华大学开源软件镜像站"><span class="post-toc-number">3.0.1.</span> <span class="post-toc-text">清华大学开源软件镜像站</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#中国科学技术大学开源镜像站"><span class="post-toc-number">3.0.2.</span> <span class="post-toc-text">中国科学技术大学开源镜像站</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四、开启VNC及安装Teamviewer"><span class="post-toc-number">4.</span> <span class="post-toc-text">四、开启VNC及安装Teamviewer</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1、VNC"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">1、VNC</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2、Teamviewer"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">2、Teamviewer</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#五、安装中文输入法"><span class="post-toc-number">5.</span> <span class="post-toc-text">五、安装中文输入法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1、配置中文环境"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">1、配置中文环境</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2、安装中文输入法"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">2、安装中文输入法</span></a></li></ol></li></ol>
-    </ul>
-    
-
-
 
 
 <!-- Layouts -->
@@ -383,7 +377,7 @@
         
     
             <p class="article-headline-p">
-                树莓派之从吃土到吃灰
+                Gradle的代理问题
             </p>
         </div>
 
@@ -402,7 +396,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>purefkh</strong>
-        <span>8月 14, 2018</span>
+        <span>9月 09, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -424,7 +418,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB2UlEQVR42u3aQU7DQAwF0N7/0rBFQqTfdlCS+mWFytDxy8LY43l9fcTzwsDAwMDAwMC4DeMVPz/X//7bN1serqnGgIGBsZORB5Eg8/W9GDAwMDYz8iSbk6KAijFgYGBgRF/xxydJCq6+GgwMDIxJwp0Uizf6v4GBgfEoRqGBPEyjSVgX9+IYGBgPZEwGA2f9fPF8AwMD48aM5kWHU9mX3RnBwMB4CCNvSpMkWG1rew0tBgbGTkbvElg+HjhufZMGOEq4GBgYH8qofl31KtjkWO14PQYGxk7GydvELyIfOWBgYGxmzNNr9dXkJSAGBgZGtYzLr01UhwSnTWIxMDA+mjHZJjlumxeXGBgYmxm9IJJPesMDDAwMjHwYUP1t9cButAYDA2MNIykN84O2ass6OYbDwMDYyThOxL1LGL0XUR5hYmBgrGH0guhdF0ua28K1MAwMjGWM5kCxWAhO9sLAwNjGqD4JIE+s1cscGBgYOxnVlHduKVk9YsPAwNjMyJNsdctywRfEg4GBsZmRJ8ReUThJ8RgYGBgTRjWUfEhZHmFiYGBgDArKfxl5YmBgrGT0hgHVRjQ/pHuzEgMDYxlj0lLmB3DzCxYYGBg7Gc99MDAwMDAwMDAufb4B6Cw/pC2HxLwAAAAASUVORK5CYII=">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACaklEQVR42u3aQVLDMAwF0N7/0rBlphC+pNgxzMuqE1LbL4tKSHp9/OvrhYeHh4eHh4eHdxjvFV9fn3///L7a+/1vjvLD872z4eHh4e3k/fJTe8m7vpNjktd3/TweHh7efl4eDK6/lRwxebJ6Njw8PLwzeXnAWPEZDw8P7y/yksBwfT9PtfHw8PDO5+X/8E/S6+TOY7UWPDw8vJg3b4DtSaMf6+/h4eHh3TvkVAwDvcZYc+gKDw8PbwHvenAq+SGO0tz4W5PCBB4eHt4eXu+g97avqqXeX57Ew8PDW8zL212TskUeEnrhCg8PD28nb7LBvP0/WRMPDw/vKV6+Ta9kkBRw88GCZhkXDw8PbzEvWbpXVpgEAzw8PLxzeNVD5M2tXkEhT8Hx8PDwnuJVl5iPESQJdzUg4eHh4T3FmxQgqslxNe0uvFA8PDy8xbwqpvpSqsXffKAhCgx4eHh4C3hJAbeXOq8Y3rptpgwPDw9vAa9ais2375VrC2VlPDw8vMW8qBkfMyYvKwlCyXADHh4e3mpevlwVn7+4SSEjqlLj4eHhLeNVi7PJX5NdquXdZmDAw8PDW8CrNviTxn+1hNFL6PHw8PD28yat+uSIvcJHXubAw8PD28nrbV8tMSQjrdWGWVSMwMPDw1vAm4xA5QfNSw+T4ISHh4e3k9drU00S7uRVVlN/PDw8vP286s/6/ECv4hUl/Xh4eHhH8u4KG0kzrLwmHh4e3mG8PDxUR1Gre41myvDw8PBu4uVNr96gQDVF7qXaeHh4eHt41QZYEgZ6K+TPL+zv4eHh4d06dHX+hYeHh4eHh4eHd8D1CVizXcmRtGoyAAAAAElFTkSuQmCC">
     
 </ul>
 
@@ -457,7 +451,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=树莓派之从吃土到吃灰&url=https://purefkh.xyz/raspberry-1/index.html&pic=https://purefkh.xyz/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Gradle的代理问题&url=https://purefkh.xyz/gradle_proxy/index.html&pic=https://purefkh.xyz/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -478,7 +472,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Fiat Lux.&title=树莓派之从吃土到吃灰&summary=&pics=https://purefkh.xyz/img/favicon.png&url=https://purefkh.xyz/raspberry-1/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Fiat Lux.&title=Gradle的代理问题&summary=&pics=https://purefkh.xyz/img/favicon.png&url=https://purefkh.xyz/gradle_proxy/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -497,100 +491,80 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>最近刚刚入手了树莓派3B，介绍一下树莓派入手教程。<br>虽然网上有很多类似教程，还是简单的总结一下。</p>
-<h3 id="一、烧写镜像"><a href="#一、烧写镜像" class="headerlink" title="一、烧写镜像"></a>一、烧写镜像</h3><p>现在树莓派已经有很多系统可以用了，像 <a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank" rel="noopener">Raspbian</a>、 <a href="https://ubuntu-mate.org/raspberry-pi/" target="_blank" rel="noopener">Ubuntu MATE</a>、 <a href="https://docs.microsoft.com/en-us/windows/iot-core/getstarted" target="_blank" rel="noopener">Windows 10 IoT Core</a>，但我个人还是推荐（或者说我个人更习惯于）Raspbian。所以下面的教程都是基于Raspbian。</p>
-<p>推荐使用 <a href="https://etcher.io/" target="_blank" rel="noopener">Etcher</a> 进行刻录，理由：全平台。</p>
-<p><img src="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/raspberry-1/1.png" alt="Etcher"></p>
-<h3 id="二、使用SSH进行连接"><a href="#二、使用SSH进行连接" class="headerlink" title="二、使用SSH进行连接"></a>二、使用SSH进行连接</h3><p>Raspbian默认是把SSH关闭的，所以需要手动在 <code>/boot</code> 新建一个ssh文件，<strong>一定注意，是ssh而不是ssh.txt</strong></p>
-<p><img src="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/raspberry-1/2.png" alt="一定注意，是ssh而不是ssh.txt"></p>
-<p>这时候，如果你有<strong>路由器</strong>，可以直接拿一根网线查到树莓派上，插卡，开机</p>
-<p><img src="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/raspberry-1/3.png" alt="如图，raspberrypi就是我的树莓派啦"></p>
-<p>如果你没有路由器，在内存卡 <code>/boot</code> 下新建wpa_supplicant.conf文件，内容如下</p>
-<pre><code>country=GB
-
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-
-update_config=1
-
-network={
-
-  ssid=&quot;你的Wi-Fi(1)&quot;
-
-  psk=&quot;你的Wi-Fi(1)密码&quot;
-
-  priority=优先级，数字越大优先级越高
-
+        <p>暑假前凭 <strong>一腔热血</strong> 报了 <code>Java及手机app开发</code> 这门课。谁知 <strong>××教务</strong> 却不认这门课的学分。便又是凭着 <strong>一腔热血</strong> 没有退课。</p>
+<p>暑假在家就一直困扰于 gradle 的网络连接问题。由于一些众所周知的原因，Android 开发对国内的网络环境实在是不算友好。</p>
+<p>最开始的时候通过 <code>proxychains</code> 来启动 Android Studio，还是可以编译的，但是在连接虚拟机的时候又会出现端口占用的问题。只能重新启动 AS，很是不便。</p>
+<p>也找了一些个解决方法，但是由于基本没有 Android 知识，一直不知道该如何去执行。</p>
+<p>这些天也开始了 Android 的学习，渐渐对基本文件有了一丁点的了解，也就顺便解决了 Gradle 的网络连接问题。</p>
+<p><strong>先要从 AS 项目中文件的作用说起</strong>。</p>
+<p>当你新建一个项目时，AS 会 <strong>默认使用</strong> Android 模式的项目结构，这种结构看起来更简洁，但是由于 <strong>不是真实结构</strong>，可能会让人摸不着头脑，建议先在左上角切换至 Project 视图，更适合我这种小白使用。</p>
+<p><img src="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/gradle_proxy/2.png" alt=""></p>
+<p>由于这篇文章只用来记录 gradle 代理的设置，所以各个文件并不一一介绍。</p>
+<p>可以看到，在 <code>gradle/</code> 下以及 <code>app/src/</code> 下分别有一个 <strong>build.gradle</strong> 文件。这便分别是 <strong>项目全局的 gradle 构建脚本</strong> 及 <strong>app 模块的 gradle 构建脚本</strong>。</p>
+<p>便看 gradle 全局构建脚本。</p>
+<pre><code class="gradle">buildscript {    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath &#39;com.android.tools.build:gradle:3.1.4&#39;
+    }
 }
 
-network={
-
-  ssid=&quot;你的Wi-Fi(2)&quot;
-
-  psk=&quot;你的Wi-Fi(2)密码&quot;
-
-  priority=优先级，数字越大优先级越高
-
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
 }
-</code></pre><hr>
-<p>最近(2018.05.25)看到消息说对新的系统以上操作无效</p>
-<p>可以尝试以下方式</p>
-<p><code>sudo nano /etc/network/interfaces</code>，当然没有路由器的话就是直接在 <code>/boot</code> 新建 <code>interfaces</code> 文件，添加如下内容，然后重启</p>
-<pre><code>auto wlan0
 
-iface wlan0 inet dhcp
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+</code></pre>
+<p>文件中的两处 <strong>repositories</strong> 都声明了 <strong>jcenter()</strong> 配置，而 jcenter 就是 Android 开源项目的一个代码托管仓库。相似的，<strong>google()</strong> 是一个依赖仓库，由于种种原因，我们想要稳定的连接这个仓库并不容易。</p>
+<p>这样讲的话此处就有两个解决方案</p>
+<ol>
+<li><p>通过合适的方式进行全局代理（由于个人水平有限，我在Linux下实在没有找到完美的方法，此处便不作介绍）</p>
+</li>
+<li><p>通过国内的镜像站（此处使用了阿里的镜像站）</p>
+<p>通过上文对 <code>build.gradle</code> 文件中 <strong>仓库配置</strong> 的简单描述，现在来看只要有了镜像站，修改起来并不是什么难事。只须将 <code>google() jcenter()</code> 注释掉，并添加镜像地址即可。</p>
+<p>示例如下</p>
+<pre><code class="gradle">buildscript {
+    repositories {
+//        google()
+//        jcenter()
+        maven { url &#39;https://plugins.gradle.org/m2/&#39; }
+        maven { url &#39;http://maven.aliyun.com/nexus/content/repositories/google&#39; }
+        maven { url &#39;http://maven.aliyun.com/nexus/content/groups/public/&#39; }
+        maven { url &#39;http://maven.aliyun.com/nexus/content/repositories/jcenter&#39;}
 
-wpa_conf /etc/wpa_supplicant/wpa_supplicant.conf
-</code></pre><p>然后就该插卡开机了</p>
-<p>接着进行SSH连接</p>
-<p>如果你有<strong>路由器</strong>，进入路由器后台，查看树莓派的内网IP地址</p>
-<p>如果没有路由器的话</p>
-<p><strong>Windows</strong></p>
-<p>cmd中使用ipconfig命令得到IP段</p>
-<p>再用 <a href="https://pan.baidu.com/s/1F_U1_E3ac5kosCe9ZBdypg" target="_blank" rel="noopener">局域网IP扫描工具</a> 来得到你的树莓派IP（没有图，懒着开机^_^）</p>
-<p><strong>Linux</strong>（或者Android手机可以使用 <a href="https://www.coolapk.com/apk/com.termux" target="_blank" rel="noopener">Termux</a> 等工具）</p>
-<p><img src="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/raspberry-1/4.png" alt="这里该有图片"></p>
-<pre><code>$ cat /proc/net/arp
-</code></pre><p>如图，我应该扫描192.168.1.***IP段</p>
-<pre><code>$ sudo nmap -sP 192.168.1.0/24
-</code></pre><p>现在已经得到了pi的IP，Windows使用putty（推荐他，是因为他免费），Linux自然是openssh喽。</p>
-<h3 id="三、换源"><a href="#三、换源" class="headerlink" title="三、换源"></a>三、换源</h3><p>接下来的第一件事应该就是换源了吧</p>
-<pre><code>$ sudo apt-get install nano
-$ sudo nano /etc/apt/sources.list
-</code></pre><p>将自带的源用 # 注释掉，加入国内的源</p>
-<h5 id="清华大学开源软件镜像站"><a href="#清华大学开源软件镜像站" class="headerlink" title="清华大学开源软件镜像站"></a><a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="noopener">清华大学开源软件镜像站</a></h5><pre><code>deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
+    }
+    dependencies {
+        classpath &#39;com.android.tools.build:gradle:3.1.4&#39;
+    }
+}
 
-deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ stretch main non-free contrib
-</code></pre><h5 id="中国科学技术大学开源镜像站"><a href="#中国科学技术大学开源镜像站" class="headerlink" title="中国科学技术大学开源镜像站"></a><a href="http://mirrors.ustc.edu.cn" target="_blank" rel="noopener">中国科学技术大学开源镜像站</a></h5><pre><code>deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ stretch main non-free contrib
+allprojects {
+    repositories {
+//        google()
+//        jcenter()
+        maven { url &#39;https://plugins.gradle.org/m2/&#39; }
+        maven { url &#39;http://maven.aliyun.com/nexus/content/repositories/google&#39; }
+        maven { url &#39;http://maven.aliyun.com/nexus/content/groups/public/&#39; }
+        maven { url &#39;http://maven.aliyun.com/nexus/content/repositories/jcenter&#39;}
+    }
+}
 
-deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ stretch main non-free contrib
-</code></pre><p>然后执行 <code>sudo apt-get update</code></p>
-<h3 id="四、开启VNC及安装Teamviewer"><a href="#四、开启VNC及安装Teamviewer" class="headerlink" title="四、开启VNC及安装Teamviewer"></a>四、开启VNC及安装Teamviewer</h3><h4 id="1、VNC"><a href="#1、VNC" class="headerlink" title="1、VNC"></a>1、VNC</h4><p>VNC（Virtual Network Computing），为一种使用RFB协议的显示屏画面分享及远程操作软件。此软件借由网络，可发送键盘与鼠标的动作及即时的显示屏画面。    ————摘自wikipedia</p>
-<p>首先ssh连接你的pi</p>
-<pre><code>$ sudo raspi-config
-</code></pre><p><img src="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/raspberry-1/5.png" alt="如图"></p>
-<p>选择 <code>5 Interfacing Options</code> - <code>P3 VNC</code> 设置为 enable，然后通过VNC软件来连接就好了，如果遇到显示不全的问题，可以根据下面的教程来调整树莓派的分辨率</p>
-<pre><code>$ sudo raspi-config
-</code></pre><p><code>7 Advanced Options</code> - <code>A5 Resolution</code> 选择合适的分辨率即可</p>
-<h4 id="2、Teamviewer"><a href="#2、Teamviewer" class="headerlink" title="2、Teamviewer"></a>2、Teamviewer</h4><p>安装 <a href="https://www.teamviewer.com/zhcn/download/linux/" target="_blank" rel="noopener">Teamviewer</a>,选择 <code>armv7 32bit</code> 版，当然，此时你就有几种方法来将.deb包下载到你的树莓派上了</p>
-<p>你可以选择上面提到的VNC来连接，使用图形化界面，通过浏览器下载，<br>也可以以wget方式，<br>或者使用 <a href="https://filezilla-project.org/" target="_blank" rel="noopener">FileZilla</a> 通过ftp上传到pi（这又是一个全平台）。</p>
-<p>现在认为你已经下载成功</p>
-<pre><code>$ sudo dpkg -i teamviewer-host***.deb
-</code></pre><p>其中***代表你的版本号</p>
-<p>当然你可能会遇到错误，缺少各种各样的依赖，可以执行 <code>sudo apt-get --fix-broken install</code> 来解决依赖问题，也有可能解决不了，需要手动下载依赖……</p>
-<p>比如在安装teamviewer的时候我就遇到了……查了一些，可以通过 <code>GDebi</code> (GDebi can install local .deb packages with automatic dependency resolution (it automatically downloads and installs the required packages).)来解决</p>
-<pre><code>$ sudo apt-get install gdebi
-$ sudo apt-get gdebi teamviewer-host***.deb
-</code></pre><p>安装成功后，可以通过 <code>teamviewer info</code> 查看本机信息， <code>teamviewer passwd 密码</code> 设置你的密码， <code>teamviewer gui</code> 启动图形化界面。</p>
-<p><img src="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/raspberry-1/6.png" alt="成果"></p>
-<p>这些应该就是树莓派入门的基本操作了。（我暂时只能想到这么多）</p>
-<hr>
-<p>2018年5月20日。来自<strong>单身狗</strong>的愤怒更新</p>
-<h3 id="五、安装中文输入法"><a href="#五、安装中文输入法" class="headerlink" title="五、安装中文输入法"></a>五、安装中文输入法</h3><h4 id="1、配置中文环境"><a href="#1、配置中文环境" class="headerlink" title="1、配置中文环境"></a>1、配置中文环境</h4><p>raspbian 默认是全英文的，如果觉得不习惯，可以将其设置为中文</p>
-<pre><code>$ sudo raspi-config
-</code></pre><p><code>4 Localisation Options</code> - <code>I1 Change Locale</code></p>
-<p>通过<strong>空格</strong>选中 <code>zh_CN.UTF-8 UTF-8</code>，<code>回车</code> 确定，在下一个界面中再次选中 <code>zh_CN.UTF-8 UTF-8</code>即可</p>
-<p><img src="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/raspberry-1/7.png" alt="如图"></p>
-<h4 id="2、安装中文输入法"><a href="#2、安装中文输入法" class="headerlink" title="2、安装中文输入法"></a>2、安装中文输入法</h4><p>只需要执行 <code>sudo apt-get install scim-pinyin</code>，然后执行 <code>scim</code> 激活输入法就O文明K了。</p>
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+</code></pre>
+<p>至此，gradle 的依赖问题 <strong>完美解决</strong>。</p>
+</li>
+</ol>
+<p>   <em>本文参考 <a href="https://www.jianshu.com/p/ab1f5e5f5f5c" target="_blank" rel="noopener">完美解决gradle依赖库导致build慢的问题</a></em></p>
 
         
     
@@ -732,21 +706,13 @@ $ sudo apt-get gdebi teamviewer-host***.deb
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/oscilloscope/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/tanhq/" id="post_nav-older" class="next-content">
+        <a href="/happy_qixi/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
