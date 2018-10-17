@@ -229,8 +229,8 @@
     
 
     
-        <meta property="article:published_time" content="Wed Oct 17 2018 11:07:34 GMT+0800">
-        <meta property="article:modified_time" content="Wed Oct 17 2018 11:07:34 GMT+0800">
+        <meta property="article:published_time" content="Wed Oct 17 2018 11:12:19 GMT+0800">
+        <meta property="article:modified_time" content="Wed Oct 17 2018 11:12:19 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,8 +252,8 @@
     "@type": "BlogPosting",
     "mainEntityOfPage": "https://purefkh.xyz/router_drcom/index.html",
     "headline": "路由器设置drcom",
-    "datePublished": "Wed Oct 17 2018 11:07:34 GMT+0800",
-    "dateModified": "Wed Oct 17 2018 11:07:34 GMT+0800",
+    "datePublished": "Wed Oct 17 2018 11:12:19 GMT+0800",
+    "dateModified": "Wed Oct 17 2018 11:12:19 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "purefkh",
@@ -517,7 +517,7 @@ fi
 <p>这个脚本的作用就是ping百度来判断网络的连接状态，$?是上一条命令执行的返回值。ping通返回0，ping不通则返回1。当ping不通的时候就重启drcom。</p>
 <p>测试完成，将其放在 <code>/usr/bin/</code> 下。</p>
 <p>测试通过后，就该解决定时运行的问题了。这里通过 <strong>crontab</strong> 来实现定时操作。</p>
-<p>编辑crontab文件，<code>crontab -e</code></p>
+<p><code>crontab -e</code>，编辑crontab文件：</p>
 <pre><code class="bash">*/2 * * * * sh /usr/bin/networkChecking.sh
 </code></pre>
 <p>即每当系统时间的分钟为偶数时，执行 <code>sh /usr/bin/networkChecking.sh</code> 命令，即每两分钟运行一次。</p>
