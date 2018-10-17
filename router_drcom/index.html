@@ -229,8 +229,8 @@
     
 
     
-        <meta property="article:published_time" content="Wed Oct 17 2018 00:51:24 GMT+0800">
-        <meta property="article:modified_time" content="Wed Oct 17 2018 00:51:24 GMT+0800">
+        <meta property="article:published_time" content="Wed Oct 17 2018 11:07:34 GMT+0800">
+        <meta property="article:modified_time" content="Wed Oct 17 2018 11:07:34 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,8 +252,8 @@
     "@type": "BlogPosting",
     "mainEntityOfPage": "https://purefkh.xyz/router_drcom/index.html",
     "headline": "路由器设置drcom",
-    "datePublished": "Wed Oct 17 2018 00:51:24 GMT+0800",
-    "dateModified": "Wed Oct 17 2018 00:51:24 GMT+0800",
+    "datePublished": "Wed Oct 17 2018 11:07:34 GMT+0800",
+    "dateModified": "Wed Oct 17 2018 11:07:34 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "purefkh",
@@ -493,36 +493,36 @@
     
         <p>众所周知，我们学校用的drcom是不允许使用路由器或者热点分享的。</p>
 <p>但是，在 <strong>世界最大的同性交友平台</strong> github上早就有大佬给出了drcom路由器的设置方法 。</p>
-<p>有意愿使用路由器的小伙伴可以直接参照 <a href="https://github.com/drcoms/drcom-generic/wiki/d%E7%89%88%E7%AE%80%E7%95%A5%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E" target="_blank" rel="noopener">d版简略使用和配置说明</a>，针对比较懒的同学，我这里直接放出已经配置好的脚本，你只要 <strong>修改其中的账号密码</strong>，便直接从文章中 <code>如果PC上运行成功，则修改 IS_TEST = True 为 IS_TEST = False</code> 部分开始操作。</p>
+<p>有意愿使用路由器的小伙伴可以参照 <a href="https://github.com/drcoms/drcom-generic/wiki/d%E7%89%88%E7%AE%80%E7%95%A5%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E" target="_blank" rel="noopener">d版简略使用和配置说明</a> 进行配置，针对比较懒的同学，我这里放出已经配置好的脚本，你只要 <strong>修改其中的账号密码</strong>，便然后直接从文章中 <code>如果PC上运行成功，则修改 IS_TEST = True 为 IS_TEST = False</code> 部分开始操作就可以了。</p>
 <p>这里是链接 <a href="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/router_drcom/latest-wired_ab.py" target="_blank" rel="noopener">AB区配置脚本</a>、<a href="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/router_drcom/latest-wired_d.py" target="_blank" rel="noopener">虎溪校区配置脚本</a>。</p>
 <p>但是最近我的路由器又经常会莫名其妙地断网，所以想了个办法，每两分钟检查一次网络连接，网若安好，便是晴天；网若不好，重启drcom。</p>
 <p>直接放具体操作。</p>
 <p>先弄了一个shell脚本，命名为 <code>networkChecking.sh</code>：</p>
 <pre><code class="bash">#! /usr/bin/sh
-#检测网络连接
+# 检测网络连接
 log=/root/networkChecking.log
-#判断输出日志文件是否存在
+# 判断输出日志文件是否存在
 if [ ! -f ${log} ]
 then
   touch ${log}
 fi
 ping -c 1 baidu.com &gt; /dev/null 2&gt;&amp;1
 if [ $? -eq 0 ];then
-  echo `date` 检测网络正常 &gt;&gt; ${log}
+  echo `date`  &quot;OK&quot;&gt;&gt; ${log}
 else
-  echo `date` 检测网络异常，重启drcom服务 &gt;&gt; ${log}
+  echo `date` &quot;Failed, restart drcom&quot; &gt;&gt; ${log}
   python /usr/bin/drcom &amp;
 fi
 </code></pre>
 <p>这个脚本的作用就是ping百度来判断网络的连接状态，$?是上一条命令执行的返回值。ping通返回0，ping不通则返回1。当ping不通的时候就重启drcom。</p>
 <p>测试完成，将其放在 <code>/usr/bin/</code> 下。</p>
 <p>测试通过后，就该解决定时运行的问题了。这里通过 <strong>crontab</strong> 来实现定时操作。</p>
-<p>编辑 <strong>crontab</strong> 文件，<code>crontab -e</code></p>
+<p>编辑crontab文件，<code>crontab -e</code></p>
 <pre><code class="bash">*/2 * * * * sh /usr/bin/networkChecking.sh
 </code></pre>
-<p>即每当系统时间的分钟为偶数时，运行 <code>sh /usr/bin/networkChecking.sh</code> 命令，即每两分钟运行一次。</p>
-<p>为防止日志文件积累过多，我们可以每个月清理一次日志文件：</p>
-<pre><code class="bash">* * 25 * * echo &quot;&quot; &gt; /root/networkChecking.log
+<p>即每当系统时间的分钟为偶数时，执行 <code>sh /usr/bin/networkChecking.sh</code> 命令，即每两分钟运行一次。</p>
+<p>为防止日志文件积累过多，我们可以每3天清理一次日志文件：</p>
+<pre><code class="bash">* * */3 * * echo &quot;&quot; &gt; /root/networkChecking.log
 </code></pre>
 <p>完成后，执行 <code>/etc/init.d/cron restart</code> 重启crontab服务即可。</p>
 <p>匆忙赶制，如有纰漏请多多谅解，并联系我。</p>
