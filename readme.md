@@ -23,4 +23,4 @@
 
 记录生活，分享心得。
 
-[http://purefkh.xyz](http://purefkh.xyz)
+[https://purefkh.xyz](https://purefkh.xyz)
