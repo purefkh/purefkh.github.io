@@ -229,8 +229,8 @@
     
 
     
-        <meta property="article:published_time" content="Mon Oct 22 2018 20:30:11 GMT+0800">
-        <meta property="article:modified_time" content="Mon Oct 22 2018 20:30:11 GMT+0800">
+        <meta property="article:published_time" content="Wed Oct 24 2018 05:12:10 GMT+0800">
+        <meta property="article:modified_time" content="Wed Oct 24 2018 05:12:10 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,8 +252,8 @@
     "@type": "BlogPosting",
     "mainEntityOfPage": "https://purefkh.xyz/router_drcom/index.html",
     "headline": "重庆大学路由器配置drcom",
-    "datePublished": "Mon Oct 22 2018 20:30:11 GMT+0800",
-    "dateModified": "Mon Oct 22 2018 20:30:11 GMT+0800",
+    "datePublished": "Wed Oct 24 2018 05:12:10 GMT+0800",
+    "dateModified": "Wed Oct 24 2018 05:12:10 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "purefkh",
@@ -396,7 +396,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>purefkh</strong>
-        <span>10月 22, 2018</span>
+        <span>10月 24, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -518,11 +518,10 @@ else
     ps | grep drcom | grep -v grep
     if [ $? -ne 0 ]
     then
-        echo &quot;......start drcom......&quot;
+        echo &quot;......start drcom......&quot; &gt;&gt; ${log}
     else
-        echo &quot;......drcom is running, kill......&quot;
-        echo &quot;......start drcom......&quot;
-        pid = $(pidof python)
+        echo &quot;......drcom is running, kill......&quot; &gt;&gt; ${log}
+        echo &quot;......start drcom......&quot; &gt;&gt; ${log}
         kill -9 $(pidof python)
     fi
     python /usr/bin/drcom &amp;
