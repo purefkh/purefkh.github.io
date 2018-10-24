@@ -229,8 +229,8 @@
     
 
     
-        <meta property="article:published_time" content="Wed Oct 24 2018 05:12:10 GMT+0800">
-        <meta property="article:modified_time" content="Wed Oct 24 2018 05:12:10 GMT+0800">
+        <meta property="article:published_time" content="Wed Oct 24 2018 22:22:40 GMT+0800">
+        <meta property="article:modified_time" content="Wed Oct 24 2018 22:22:40 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -252,8 +252,8 @@
     "@type": "BlogPosting",
     "mainEntityOfPage": "https://purefkh.xyz/router_drcom/index.html",
     "headline": "重庆大学路由器配置drcom",
-    "datePublished": "Wed Oct 24 2018 05:12:10 GMT+0800",
-    "dateModified": "Wed Oct 24 2018 05:12:10 GMT+0800",
+    "datePublished": "Wed Oct 24 2018 22:22:40 GMT+0800",
+    "dateModified": "Wed Oct 24 2018 22:22:40 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "purefkh",
@@ -501,20 +501,29 @@
 <pre><code class="bash">#! /usr/bin/sh
 # /usr/bin/networkChecking.sh
 
-# log
-log=/root/networkChecking.log
+# 检查日志文件
+log=~/networkChecking.log
 if [ ! -f ${log} ]
 then
     touch ${log}
 fi
 
-# check the connection
+# 检查网络连接
 ping -c 1 baidu.com &gt; /dev/null 2&gt;&amp;1
 if [ $? -eq 0 ]
 then
     echo `date`  &quot;......OK......&quot; &gt;&gt; ${log}
 else
     echo `date` &quot;......Failed......&quot; &gt;&gt; ${log}
+    # 如果drcom登录超时，重启路由器
+    ps | grep &quot;timeout, retrying&quot; ~/drcom.log | grep -v grep
+    if [ $? -eq 0 ]
+    then
+        echo $NULL &gt; ~/drcom.log
+        echo `date` &quot;......timeout......&quot; &gt;&gt; ~/networkChecking.log
+        reboot
+    fi
+    # 若已存在drcom进程，杀掉；没有则直接重启drcom
     ps | grep drcom | grep -v grep
     if [ $? -ne 0 ]
     then
@@ -522,9 +531,9 @@ else
     else
         echo &quot;......drcom is running, kill......&quot; &gt;&gt; ${log}
         echo &quot;......start drcom......&quot; &gt;&gt; ${log}
-        kill -9 $(pidof python)
+        kill -9 $(pidof python /usr/bin/drcom)
     fi
-    python /usr/bin/drcom &amp;
+    python /usr/bin/drcom &gt; ~/drcom.log &amp;
 fi
 </code></pre>
 <p>这个脚本的作用就是ping百度来判断网络的连接状态，$?是上一条命令执行的返回值。ping通返回0，ping不通则返回1。当ping不通的时候就重启drcom。</p>
@@ -532,6 +541,10 @@ fi
 <p>2018.10.22更新</p>
 <ul>
 <li>脚本逻辑优化，修复由于drcom进程已经存在产生的端口占用问题</li>
+</ul>
+<p>2018.10.24更新</p>
+<ul>
+<li>修复偶尔出现的脚本无法登录的问题（目前只想到了重启路由器）—— 判断则是通过抓取 drcom 的运行日志，一旦 <code>timeout</code> 便重启，因此可能需要修改自启命令为 <code>python /usr/bin/drcom &gt; ~/drcom.log &amp;</code></li>
 </ul>
 <hr>
 <p>测试完成，将其放在 <code>/usr/bin/</code> 下。</p>
