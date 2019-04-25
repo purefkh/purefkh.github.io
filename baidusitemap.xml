@@ -1,114 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-
-    
-    
   <url>
     <loc>https://purefkh.xyz/router_drcom/</loc>
-    <lastmod>2018-11-13T12:28:37.162Z</lastmod>
-    <data>
-        <display>
-        <title>重庆大学路由器配置drcom</title>
-        <pubTime>2019-04-17T13:50:51.369Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-11-13</lastmod>
+  </url>  <url>
     <loc>https://purefkh.xyz/gradle_proxy/</loc>
-    <lastmod>2018-09-09T14:24:48.244Z</lastmod>
-    <data>
-        <display>
-        <title>Gradle的代理问题</title>
-        <pubTime>2019-04-17T13:50:51.351Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-    
-  <url>
+    <lastmod>2018-09-09</lastmod>
+  </url>  <url>
     <loc>https://purefkh.xyz/happy_qixi/</loc>
-    <lastmod>2018-08-17T15:54:12.586Z</lastmod>
-    <data>
-        <display>
-        <title>迟来的七夕快乐</title>
-        <pubTime>2019-04-17T13:50:51.501Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-08-17</lastmod>
+  </url>  <url>
     <loc>https://purefkh.xyz/oscilloscope/</loc>
-    <lastmod>2018-08-13T16:13:24.741Z</lastmod>
-    <data>
-        <display>
-        <title>电赛培训之示波器</title>
-        <pubTime>2019-04-17T13:50:51.446Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-08-13</lastmod>
+  </url>  <url>
     <loc>https://purefkh.xyz/raspberry-1/</loc>
-    <lastmod>2018-08-13T16:11:49.269Z</lastmod>
-    <data>
-        <display>
-        <title>树莓派之从吃土到吃灰</title>
-        <pubTime>2019-04-17T13:50:51.423Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-08-13</lastmod>
+  </url>  <url>
     <loc>https://purefkh.xyz/tanhq/</loc>
-    <lastmod>2018-08-13T16:10:15.901Z</lastmod>
-    <data>
-        <display>
-        <title>关于谭浩强教授</title>
-        <pubTime>2019-04-17T13:50:51.392Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
+    <lastmod>2018-08-13</lastmod>
+  </url>  <url>
     <loc>https://purefkh.xyz/hello-world/</loc>
-    <lastmod>2018-05-10T16:47:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2019-04-17T13:50:51.469Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
+    <lastmod>2018-05-10</lastmod>
+  </url>
 </urlset>
