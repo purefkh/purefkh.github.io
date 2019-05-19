@@ -254,7 +254,7 @@
 
     
         <meta property="article:published_time" content="Sun May 19 2019 00:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Sun May 19 2019 20:33:03 GMT+0800">
+        <meta property="article:modified_time" content="Sun May 19 2019 21:49:50 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -277,7 +277,7 @@
     "mainEntityOfPage": "https://purefkh.xyz/raspberry-2/index.html",
     "headline": "我拿树莓派做了什么",
     "datePublished": "Sun May 19 2019 00:00:00 GMT+0800",
-    "dateModified": "Sun May 19 2019 20:33:03 GMT+0800",
+    "dateModified": "Sun May 19 2019 21:49:50 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "purefkh",
@@ -567,7 +567,7 @@ fi
 192.168.1.171 192.168.1.178
 </code></pre>
 <p>一个是我的有线IP，另一个是无线IP</p>
-<p>但我并没有用这种方法，二十选择了 <code>ifconfig</code> 命令：</p>
+<p>但我并没有用这种方法，选择了 <code>ifconfig</code> 命令：</p>
 <pre><code class="bash">$ ifconfig eth0 | sed -n &quot;2,2p&quot; | awk &#39;{print substr($2,1)}&#39;
 192.168.1.171
 $ ifconfig wlan0 | sed -n &quot;2,2p&quot; | awk &#39;{print substr($2,1)}&#39;
