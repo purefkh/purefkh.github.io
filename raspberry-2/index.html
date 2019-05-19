@@ -254,7 +254,7 @@
 
     
         <meta property="article:published_time" content="Sun May 19 2019 00:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Sun May 19 2019 20:17:36 GMT+0800">
+        <meta property="article:modified_time" content="Sun May 19 2019 20:30:03 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -277,7 +277,7 @@
     "mainEntityOfPage": "https://purefkh.xyz/raspberry-2/index.html",
     "headline": "我拿树莓派做了什么",
     "datePublished": "Sun May 19 2019 00:00:00 GMT+0800",
-    "dateModified": "Sun May 19 2019 20:17:36 GMT+0800",
+    "dateModified": "Sun May 19 2019 20:30:03 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "purefkh",
@@ -605,6 +605,7 @@ Enjoy!&quot; | mutt -s &quot;IP Address of Raspberry: (ETH0)$ETH0_IP_ADDR (WLAN0
 <p>重启测试。</p>
 <p><img src="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/raspberry-2/2.png" alt=""></p>
 <h3 id="二、Transmission下载机"><a href="#二、Transmission下载机" class="headerlink" title="二、Transmission下载机"></a>二、Transmission下载机</h3><p>参考自 <a href="https://wiki.archlinux.org/index.php/Transmission_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87" target="_blank" rel="noopener">ArchWiki</a>)</p>
+<p>『1』Transmission安装及配置</p>
 <p>安装cli和进程守护程序：<code>sudo apt install transmission-cli transmission-daemon</code></p>
 <p>设置web界面：</p>
 <pre><code class="bash">transmission-daemon -t -u arch -v linux -p 9091 -a &quot;127.0.0.1&quot;
@@ -615,6 +616,32 @@ Enjoy!&quot; | mutt -s &quot;IP Address of Raspberry: (ETH0)$ETH0_IP_ADDR (WLAN0
 <li>修改配置文件 <code>~/.config/transmission-daemon/settings.json</code> 后，需要使用 <code>killall -HUP transmission-daemon</code> 应用配置。</li>
 <li>如果想用一个文本编辑器手动编辑配置文件，请先停止守护程序；否则当它停止时将会覆盖配置文件。</li>
 </ul>
+<p>『2』搭建SMB</p>
+<p>为了方便用电脑或者手机直接看树莓派中的视频，搭建了samba。</p>
+<p>首先安装：</p>
+<pre><code class="bash">sudo apt install samba samba-common-bin
+</code></pre>
+<p>修改 <code>/etc/samba/smb.conf</code> 配置文件，在文件末尾添加：</p>
+<pre><code class="bash">[public]
+   comment = public storage
+   path = /home/pi/public
+   valid users = pi
+   read only = no
+   create mask = 0777
+   directory mask = 0777
+   guest ok = no
+   browseable = yes
+</code></pre>
+<p><code>valid users</code>，即 pi 为有效用户，将其添加到 Samba 中：</p>
+<pre><code class="bash">sudo smbpasswd -a pi
+</code></pre>
+<p>创建密码后，重启 samba 使配置生效：</p>
+<pre><code class="bash">sudo samba restart
+</code></pre>
+<p>最后设置权限：</p>
+<pre><code class="bash">sudo chmod -R 777 ~/public
+</code></pre>
+<p><img src="https://purefkh-blog-1256555660.cos.ap-chengdu.myqcloud.com/raspberry-2/6.png" alt=""></p>
 <h3 id="三、UnblockNeteaseMusic"><a href="#三、UnblockNeteaseMusic" class="headerlink" title="三、UnblockNeteaseMusic"></a>三、UnblockNeteaseMusic</h3><p>解锁网易云音乐客户端变灰歌曲，项目来自 <a href="https://github.com/nondanee/UnblockNeteaseMusic" target="_blank" rel="noopener">UnblockNeteaseMusic</a></p>
 <pre><code class="bash">git clone https://github.com/nondanee/UnblockNeteaseMusic.git
 cd ~/UnblockNeteaseMusic
