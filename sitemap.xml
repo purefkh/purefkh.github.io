@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://purefkh.xyz/404.html</loc>
+    
+    <lastmod>2019-06-23T14:09:40.634Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://purefkh.xyz/raspberry-2/</loc>
     
     <lastmod>2019-05-19T13:49:50.726Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>https://purefkh.xyz/helloworld/</loc>
     
     <lastmod>2019-04-26T09:10:47.607Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://purefkh.xyz//404.html</loc>
-    
-    <lastmod>2018-08-28T02:09:16.981Z</lastmod>
     
   </url>
   
