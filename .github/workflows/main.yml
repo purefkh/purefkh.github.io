@@ -11,7 +11,7 @@ jobs:
   # This workflow contains a single job called "build"
    deploy:
     runs-on: ubuntu-latest
-    name: Tencent Cloudbase Github Action Example
+    name: Tencent Cloudbase Github Action
     steps:
       - name: Checkout
         uses: actions/checkout@v2

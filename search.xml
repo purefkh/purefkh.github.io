@@ -3,15 +3,6 @@
   
     
     <entry>
-      <title>Github Action + CloudBase Test</title>
-      <link href="/CI-test/"/>
-      <url>/CI-test/</url>
-      <content type="html"><![CDATA[<p><a href="https://github.com/TencentCloudBase/cloudbase-action" target="_blank" rel="noopener">references: </a></p>]]></content>
-      
-      
-    </entry>
-    
-    <entry>
       <title>田间大棚环境参数检测系统</title>
       <link href="/stm32-filed-decetion/"/>
       <url>/stm32-filed-decetion/</url>
