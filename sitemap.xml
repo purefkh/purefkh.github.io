@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://purefkh.xyz/CI-test/</loc>
+    
+    <lastmod>2020-08-12T08:28:53.370Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://purefkh.xyz//404.html</loc>
     
     <lastmod>2020-08-11T08:38:06.840Z</lastmod>
@@ -9,14 +16,14 @@
   </url>
   
   <url>
-    <loc>https://purefkh.xyz/stm32-filed-decetion/</loc>
+    <loc>https://purefkh.xyz/tanhq/</loc>
     
     <lastmod>2020-08-11T08:38:06.830Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://purefkh.xyz/tanhq/</loc>
+    <loc>https://purefkh.xyz/stm32-filed-decetion/</loc>
     
     <lastmod>2020-08-11T08:38:06.830Z</lastmod>
     
