@@ -1,0 +1,18 @@
+
+{
+    "version": "2.0",
+    "envId": "{{env.envId}}",
+    "framework": {
+        "name": "blog",
+        "plugins": {
+            "client": {
+                "use": "@cloudbase/framework-plugin-website",
+                "inputs": {
+                    "outputPath": "./",
+                    "ignore": [".git", ".github", "cloudbaserc.json"]
+                }
+            }
+        }
+    },
+    "region": "ap-shanghai"
+}
